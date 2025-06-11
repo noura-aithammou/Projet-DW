@@ -1,0 +1,39 @@
+version: 2
+
+sources:
+  - name: raw_data
+    description: "Données brutes des avis bancaires"
+    schema: public  # ← LIGNE CRUCIALE AJOUTÉE
+    tables:
+      - name: raw_reviews
+        description: "Table des avis bruts scrapés de Google Maps"
+        loaded_at_field: created_at
+        columns:
+          - name: id
+            description: "Identifiant unique de l'avis"
+            data_tests:
+              - unique
+              - not_null
+          - name: banque
+            description: "Nom de la banque"
+            data_tests:
+              - not_null
+          - name: ville
+            description: "Ville de l'agence"
+          - name: nom_agence
+            description: "Nom de l'agence bancaire"
+          - name: localisation
+            description: "Adresse complète de l'agence"
+          - name: note
+            description: "Note donnée (format texte brut)"
+          - name: avis
+            description: "Texte de l'avis client"
+            data_tests:
+              - not_null
+          - name: date_avis
+            description: "Date de l'avis (format texte brut)"
+          - name: created_at
+            description: "Timestamp d'insertion"
+        freshness:
+          warn_after: {count: 1, period: day}
+          error_after: {count: 7, period: day}

@@ -1,0 +1,49 @@
+[0m21:17:09.601879 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f66e8bbeaf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f66e71ffbb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f66e71ff3d0>]}
+
+
+============================== 21:17:09.605399 | 66bea4ad-86c0-40a8-a707-62260bac32d1 ==============================
+[0m21:17:09.605399 [info ] [MainThread]: Running with dbt=1.8.7
+[0m21:17:09.606344 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/noura/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt init', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m21:18:10.075059 [debug] [MainThread]: Starter project path: /home/noura/venv/lib/python3.8/site-packages/dbt/include/starter_project
+[0m21:18:10.095675 [info ] [MainThread]: 
+Your new dbt project "morocco_banks_reviews" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m21:18:10.096857 [info ] [MainThread]: Setting up your profile.
+[0m21:19:43.122417 [info ] [MainThread]: Profile morocco_banks_reviews written to /home/noura/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m21:19:43.126166 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 153.6015, "process_user_time": 1.49173, "process_kernel_time": 0.331495, "process_mem_max_rss": "89412", "process_in_blocks": "38832", "process_out_blocks": "88"}
+[0m21:19:43.127167 [debug] [MainThread]: Command `dbt init` succeeded at 21:19:43.126935 after 153.60 seconds
+[0m21:19:43.127762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f66e8bbeaf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f66e59a14f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f66e71ff3d0>]}
+[0m21:19:43.128342 [debug] [MainThread]: Flushing usage events
+[0m21:20:01.294594 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f05ae6648e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f05ace767f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f05ade0b0d0>]}
+
+
+============================== 21:20:01.296927 | 28975011-cf3b-47e6-a296-57d88ca59e3b ==============================
+[0m21:20:01.296927 [info ] [MainThread]: Running with dbt=1.8.7
+[0m21:20:01.297621 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': '/home/noura/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m21:20:01.305285 [info ] [MainThread]: dbt version: 1.8.7
+[0m21:20:01.305794 [info ] [MainThread]: python version: 3.8.10
+[0m21:20:01.306256 [info ] [MainThread]: python path: /home/noura/venv/bin/python3
+[0m21:20:01.306624 [info ] [MainThread]: os info: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.29
+[0m21:20:01.352340 [info ] [MainThread]: Using profiles dir at /home/noura/.dbt
+[0m21:20:01.352968 [info ] [MainThread]: Using profiles.yml file at /home/noura/.dbt/profiles.yml
+[0m21:20:01.353589 [info ] [MainThread]: Using dbt_project.yml file at /home/noura/dbt_project/dbt_project.yml
+[0m21:20:01.354237 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m21:20:01.355283 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.11063774, "process_user_time": 1.042002, "process_kernel_time": 0.060699, "process_mem_max_rss": "90184", "process_in_blocks": "40", "process_out_blocks": "16", "command_success": false}
+[0m21:20:01.355907 [debug] [MainThread]: Command `dbt debug` failed at 21:20:01.355804 after 0.11 seconds
+[0m21:20:01.356197 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f05ae6648e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f05aeac6d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f05accb82b0>]}
+[0m21:20:01.356486 [debug] [MainThread]: Flushing usage events

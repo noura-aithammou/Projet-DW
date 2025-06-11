@@ -1,0 +1,54 @@
+
+# version: 2
+
+# models:
+#   - name: my_first_dbt_model
+#     description: "A starter dbt model"
+#     columns:
+#       - name: id
+#         description: "The primary key for this table"
+#         data_tests:
+#           - unique
+#           - not_null
+
+#   - name: my_second_dbt_model
+#     description: "A starter dbt model"
+#     columns:
+#       - name: id
+#         description: "The primary key for this table"
+#         data_tests:
+#           - unique
+#           - not_null
+
+version: 2
+
+models:
+  - name: mart_reviews_clean
+    description: "Table finale des avis nettoyés et enrichis"
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - id
+    columns:
+      - name: id
+        description: "Identifiant unique de l'avis"
+        tests:
+          - unique
+          - not_null
+      - name: banque
+        description: "Nom de la banque normalisé"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['CIH Bank', 'Attijariwafa Bank', 'BMCE Bank', 'Al Barid Bank', 'Banque Populaire', 'Crédit Agricole du Maroc', 'Société Générale Maroc', 'BMCI']
+      - name: note
+        description: "Note numérique (0-5)"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: ">= 0 AND <= 5"
+      - name: text_quality_score
+        description: "Score de qualité du texte (0-1)"
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: ">= 0 AND <= 1"
